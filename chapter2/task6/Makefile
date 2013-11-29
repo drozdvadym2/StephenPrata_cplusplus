@@ -1,7 +1,7 @@
 # Created by V. Drozd
 
 
-PRODUCT_NAME = ch1task6
+PRODUCT_NAME = ch2task6
 
 buildstyle = release
 
