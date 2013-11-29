@@ -1,1 +1,1 @@
-ECHO is on.
+All exersizes from Stephen Prata C++ Six Edition
