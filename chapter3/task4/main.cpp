@@ -1,36 +1,37 @@
 #include <iostream>
 using namespace std;
 
-const int 	in2ft_scale = 12;
-const float m2in_scale = 0.0254;
-const float pn2kg_scale = 2.2;
+const int S_MINUTE = 60;
+const int S_HOUR = S_MINUTE * 60;
+const int S_DAY = S_HOUR * 24;
+
 
 int main()
 {
-	int height_in;
-	int height_ft;
-	int weight_pn;
+	long long all_seconds, remain_seconds;
+	long days, hours, minutes;
 
-	float height_m;
-	float weight_kg;
 	
-	cout << "Please, enter your height in feet and inches:" << endl;
-	cout << "feet: ";
-	cin >> height_ft;
-	cout << "inches: ";
-	cin >> height_in;
+	cout << "Enter the number of seconds:" << endl;
+	cin >> all_seconds;
 
-	cout << "Please, enter your weight in pounds: ";
-	cin >> weight_pn;
+	days = all_seconds / S_DAY;
+	remain_seconds = all_seconds - S_DAY * days;
+
+	hours = remain_seconds / S_HOUR;
+	remain_seconds = remain_seconds - S_HOUR * hours;
+
+	minutes = remain_seconds / S_MINUTE;
+	remain_seconds = remain_seconds - S_MINUTE * minutes;
 
 
-	//Calculate BMI
-	height_m = (height_ft * in2ft_scale + height_in) * m2in_scale;
-	weight_kg = weight_pn / pn2kg_scale;
 
-	double BMI = height_m / (weight_kg * weight_kg);
+	cout << all_seconds << " seconds = ";
 
-	cout << "Your BMI is " << BMI << endl;
+	cout << days << " days, ";
+	cout << hours << " hours, ";
+	cout << minutes << " minutes, ";
+	cout << remain_seconds << " seconds" << endl;
 
 	return 0;
 }
