@@ -16,13 +16,13 @@ int main()
 	cin >> all_seconds;
 
 	days = all_seconds / S_DAY;
-	remain_seconds = all_seconds - S_DAY * days;
+	remain_seconds = all_seconds % S_DAY;
 
 	hours = remain_seconds / S_HOUR;
-	remain_seconds = remain_seconds - S_HOUR * hours;
+	remain_seconds = remain_seconds % S_HOUR;
 
 	minutes = remain_seconds / S_MINUTE;
-	remain_seconds = remain_seconds - S_MINUTE * minutes;
+	remain_seconds = remain_seconds % S_MINUTE;
 
 
 

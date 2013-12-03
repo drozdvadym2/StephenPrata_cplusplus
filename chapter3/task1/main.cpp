@@ -21,7 +21,7 @@ int main()
 	int height_inches;
 	Height res_height;
 
-	cout << "Please, enter your height in inches:_";
+	cout << "Please, enter your height in inches:___\b\b\b";
 	cin >> height_inches;
 
 	res_height.set(height_inches);
